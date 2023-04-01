@@ -4,99 +4,367 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    >
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_view_title"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Hello World!"-->
-<!--        android:textSize="50dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text_view_number"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:text="0!"-->
-<!--        android:textSize="50dp"-->
-
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--       app:layout_constraintTop_toBottomOf="@id/text_view_title" />-->
-<!--    <Button-->
-<!--        a+-->
-<!--    ndroid:id="@+id/nhan"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Nhấn"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/text_view_number"-->
-<!--        app:layout_constraintLeft_toLeftOf="@id/text_view_number"-->
-<!--        app:layout_constraintRight_toRightOf="@id/text_view_number"-->
-<!--        />-->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xanh"
-        android:layout_marginTop="250dp"
-        android:background="@color/green"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toBottomOf="@id/b1"
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="right|bottom"
+        android:text="@string/number_default"
+        android:textSize="100sp"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b2"
-            android:layout_width="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginRight="30dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        >
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Đỏ"
+            app:layout_constraintTop_toBottomOf="@+id/display"
             android:layout_weight="1"
-            android:background="@color/red"
-             />
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/AC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="AC"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/plus_or_minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="+/-"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text=" % "
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/division"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:gravity="center"
+                android:text="/"
+                android:textSize="50sp"
+                android:layout_weight="1"
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+        </LinearLayout>
         <Space
-            android:layout_width="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tím"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
             android:layout_weight="1"
-            android:background="@color/purple"
-             />
+
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="7"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="8"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="9"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/multi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:gravity="center"
+                android:text="*"
+                android:textSize="50sp"
+                android:layout_weight="1"
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+        </LinearLayout>
         <Space
-            android:layout_width="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/b4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vàng"
-            android:background="@color/yellow"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
             android:layout_weight="1"
-            />
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="4"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="6"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="50sp"
+                android:layout_weight="1"
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line3"
+            android:layout_weight="1"
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="2"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="50sp"
+                android:layout_weight="1"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="50sp"
+                android:layout_weight="1"
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line4"
+            android:layout_weight="1"
+            >
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border3"
+                android:gravity="end"
+                android:paddingRight="30dp"
+                android:text="0"
+                android:textSize="50sp"
+                android:layout_weight="0.35"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/comma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text=","
+                android:textSize="50sp"
+                android:layout_weight="0.5"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+            <TextView
+                android:id="@+id/equery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="="
+                android:textSize="50sp"
+                android:layout_weight="0.5"
+
+                />
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50sp"/>
+
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
