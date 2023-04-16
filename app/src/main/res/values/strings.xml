@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Bottom Navigation</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_gifts">Gifts</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_profile">Profile</string>
+    <string name="text_fragment_1">Home</string>
+    <string name="text_fragment_2">gife</string>
+    <string name="text_fragment_3">your cart</string>
+    <string name="text_fragment_4">setting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_in_textview_home_fragment"> Home</string>
+    <string name="String_log_out">LogOut</string>
+    <string name="string_textview_setting_fragment">Setting</string>
+    <string name="string_textview_gift_fragment">Gift</string>
+    <string name="string_textview_cart_fragment">cart</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="5"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <FrameLayout
+        android:id="@+id/fragment_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fragment_Home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_fragment_1"
+            android:drawableTop="@drawable/baseline_home_24"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/text_fragment_1"
+            tools:ignore="NestedWeights,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/fragment_gift"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_fragment_1"
+            android:drawableTop="@drawable/baseline_card_giftcard_24"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/text_fragment_2"
+
+            />
+
+        <TextView
+            android:id="@+id/fragment_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_fragment_1"
+            android:drawableTop="@drawable/baseline_shopping_cart_24"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/text_fragment_3"
+
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/fragment_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_fragment_1"
+            android:drawableTop="@drawable/baseline_person_24"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/text_fragment_4"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+    </LinearLayout>
+</LinearLayout>
